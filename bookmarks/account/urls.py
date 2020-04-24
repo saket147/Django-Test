@@ -32,5 +32,8 @@ urlpatterns = [
     path('', include('django.contrib.auth.urls')),
     path('register/', views.register, name='register'),
     path('edit/', views.edit, name='edit'),
-    url('', include('social_django.urls', namespace='social'))
+    url('', include('social_django.urls', namespace='social')),
+    path('users/', views.user_list, name='user_list'),
+    path('user/follow/', views.user_follow, name='user_follow'),
+    path('users/<username>/', views.user_detail, name='user_detail'),
 ]
