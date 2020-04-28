@@ -127,3 +127,9 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 CART_SESSION_ID = 'cart'
+
+# E-mail backend
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# CELERY_RESULT_BACKEND='djcelery.backends.database:DatabaseBackend'
+CELERY_BROKER_URL = 'amqp://localhost'
